@@ -1,0 +1,14 @@
+diff -ur libayemu-0.9.5.orig/src/Makefile.am libayemu-0.9.5/src/Makefile.am
+--- libayemu-0.9.5.orig/src/Makefile.am	2005-10-15 17:21:03.000000000 +0200
++++ libayemu-0.9.5/src/Makefile.am	2006-05-11 00:00:18.716689750 +0200
+@@ -1,9 +1,9 @@
+ lib_LTLIBRARIES         = libayemu.la
+ libayemu_la_SOURCES     = ay8912.c lh5dec.c vtxfile.c 
++libayemu_la_CFLAGS      = $(AM_CFLAGS) -I$(top_srcdir)/include
+ 
+ ## info autobook, 11.4 Library Versioning
+ libayemu_la_LDFLAGS     = -no-undefined -release 0.95 -version-info 0:0:0
+-CPPFLAGS                = -Wall -I$(top_srcdir)/include
+ 
+ check_PROGRAMS = test
+ test_SOURCES = test.c ay8912.c

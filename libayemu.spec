@@ -3,7 +3,8 @@ Summary(pl):	Biblioteka emuluj±ca uk³ad d¼wiêkowy AY/YM
 Name:		libayemu
 Version:	0.9.5
 Release:	1
-License:	GPL
+# specified in <ayemu.h>
+License:	LGPL v2+
 Group:		Libraries
 Source0:	http://heanet.dl.sourceforge.net/libayemu/%{name}-%{version}.tar.gz
 # Source0-md5:	aedf8c562b3e47584bf42114a438b6ed
@@ -11,20 +12,19 @@ Patch0:		%{name}-am.patch
 URL:		http://sashnov.nm.ru/libayemu.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libstdc++-devel
-BuildRequires:	libtool >= 2:1.4d
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This is the AY/YM sound chip emulator. This chip was used in wide
 range of old popular machines as Sinclair ZX Spectrum 128, Amstrad,
-Atari and others. With this library you can hear music from these
+Atari ST and others. With this library you can hear music from these
 computers games or add AY/YM music to your own games/demoz/etc.
 
 %description -l pl
 Bibliotela emuluj±ca uk³ad d¼wiêkowy AY/YM. Uk³ad ten by³ u¿ywany w
 wielu starych popularnych komputerach takich jak ZX Spectrum 128,
-Amstrad, Atari i innych. U¿ywaj±c tej biblioteki mo¿na s³uchaæ
+Amstrad, Atari ST i innych. U¿ywaj±c tej biblioteki mo¿na s³uchaæ
 muzyki z gier produkowanych na te komputery. Mo¿na równie¿ u¿yæ plików
 muzycznych dla uk³adu AY/YM w swoich w³asnych grach, demach itp.
 
@@ -57,6 +57,7 @@ Statyczna biblioteka libayemu.
 %patch0 -p1
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
@@ -78,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog README TODO
+%doc AUTHORS ChangeLog README RELEASENOTES THANKS TODO
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 %files devel

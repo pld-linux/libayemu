@@ -1,5 +1,5 @@
 Summary:	The AY/YM sound chip emulator library
-Summary(pl):	Biblioteka emuluj±ca uk≥ad dºwiÍkowy AY/YM
+Summary(pl.UTF-8):   Biblioteka emulujƒÖca uk≈Çad d≈∫wiƒôkowy AY/YM
 Name:		libayemu
 Version:	0.9.5
 Release:	1
@@ -21,35 +21,35 @@ range of old popular machines as Sinclair ZX Spectrum 128, Amstrad,
 Atari ST and others. With this library you can hear music from these
 computers games or add AY/YM music to your own games/demoz/etc.
 
-%description -l pl
-Bibliotela emuluj±ca uk≥ad dºwiÍkowy AY/YM. Uk≥ad ten by≥ uøywany w
+%description -l pl.UTF-8
+Bibliotela emulujƒÖca uk≈Çad d≈∫wiƒôkowy AY/YM. Uk≈Çad ten by≈Ç u≈ºywany w
 wielu starych popularnych komputerach takich jak ZX Spectrum 128,
-Amstrad, Atari ST i innych. Uøywaj±c tej biblioteki moøna s≥uchaÊ
-muzyki z gier produkowanych na te komputery. Moøna rÛwnieø uøyÊ plikÛw
-muzycznych dla uk≥adu AY/YM w swoich w≥asnych grach, demach itp.
+Amstrad, Atari ST i innych. U≈ºywajƒÖc tej biblioteki mo≈ºna s≈Çuchaƒá
+muzyki z gier produkowanych na te komputery. Mo≈ºna r√≥wnie≈º u≈ºyƒá plik√≥w
+muzycznych dla uk≈Çadu AY/YM w swoich w≈Çasnych grach, demach itp.
 
 %package devel
 Summary:	Header files for libayemu library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libayemu
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libayemu
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libayemu library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki libayemu.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki libayemu.
 
 %package static
 Summary:	Static libayemu library
-Summary(pl):	Statyczna biblioteka libayemu
+Summary(pl.UTF-8):   Statyczna biblioteka libayemu
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libayemy library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libayemu.
 
 %prep

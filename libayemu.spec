@@ -1,5 +1,5 @@
 Summary:	The AY/YM sound chip emulator library
-Summary(pl.UTF-8):   Biblioteka emulująca układ dźwiękowy AY/YM
+Summary(pl.UTF-8):	Biblioteka emulująca układ dźwiękowy AY/YM
 Name:		libayemu
 Version:	0.9.5
 Release:	1
@@ -30,7 +30,7 @@ muzycznych dla układu AY/YM w swoich własnych grach, demach itp.
 
 %package devel
 Summary:	Header files for libayemu library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libayemu
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libayemu
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -42,7 +42,7 @@ Pliki nagłówkowe biblioteki libayemu.
 
 %package static
 Summary:	Static libayemu library
-Summary(pl.UTF-8):   Statyczna biblioteka libayemu
+Summary(pl.UTF-8):	Statyczna biblioteka libayemu
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 

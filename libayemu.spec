@@ -1,14 +1,13 @@
 Summary:	The AY/YM sound chip emulator library
 Summary(pl.UTF-8):	Biblioteka emulująca układ dźwiękowy AY/YM
 Name:		libayemu
-Version:	0.9.5
+Version:	1.0.0
 Release:	1
 # specified in <ayemu.h>
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://heanet.dl.sourceforge.net/libayemu/%{name}-%{version}.tar.gz
-# Source0-md5:	aedf8c562b3e47584bf42114a438b6ed
-Patch0:		%{name}-am.patch
+Source0:	http://dl.sourceforge.net/libayemu/%{name}-%{version}.tar.gz
+# Source0-md5:	548cf778170a982de8ebcb0880b5518c
 URL:		http://sashnov.nm.ru/libayemu.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -54,7 +53,6 @@ Statyczna biblioteka libayemu.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -79,15 +77,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README RELEASENOTES THANKS TODO
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%doc AUTHORS ChangeLog NEWS README RELEASENOTES THANKS TODO
+%attr(755,root,root) %{_libdir}/libayemu-1.0.0.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libayemu-1.0.0.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/*.h
+%attr(755,root,root) %{_libdir}/libayemu.so
+%{_libdir}/libayemu.la
+%{_includedir}/ayemu*.h
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libayemu.a
